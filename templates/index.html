@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{%block title%}GENOVA AI{%endblock%}
+
+{% block content %}
+<header class="bg-light py-5">
+    <div class="container">
+        <div class="row gx-5 align-items-center justify-content-center">
+            <div class="col-lg-8 col-xl-7 col-xxl-6">
+                <div class="my-5 text-center text-xl-start">
+                    <h1 class="display-5 fw-bolder mb-2">Advancing Healthcare with State-of-the-Art Deep Learning</h1>
+                    <p class="lead fw-normal text-justify mb-4">Sistem Analisis Gambar Tumor Otak Berbasis Artificial
+                        Intelligence
+                        untuk Mendeteksi Tanda-Tanda Potensial Tumor Otak pada Pemindaian Radiologi</p>
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                        <a class="btn btn-primary btn-lg px-4 me-sm-3" href="{{ url_for('predict')}}">Prediksi AI</a>
+                        <a class="btn btn-success btn-lg px-4" href="{{ url_for('more')}}">Tumor Otak Lebih Detail</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img
+                    class="img-fluid rounded my-3 img-responsive" src="/static/image/top-image.jpg"></div>
+        </div>
+    </div>
+</header>
+
+<body>
+    <!-- Blog preview section-->
+    <section class="py-3">
+        <div class="container px-5 my-3">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-8 col-xl-6">
+                    <div class="text-center">
+                        <h2 class="fw-bolder">Kelas Prediksi Tumor Otak</h2>
+                        <p class="lead fw-normal text-muted mb-4">Dataset berisi 7023 gambar MRI otak manusia
+                            yang diklasifikasikan menjadi 4 kelas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row gx-5">
+                <div class="col-lg-3 mb-5">
+                    <div class="card h-100 shadow border-0">
+                        <img class="card-img-top" src="/static/galery_glioma/glioma1.jpg" alt="..." />
+                        <div class="card-body p-4">
+                            <a class="text-decoration-none link-dark stretched-link" href="{{ url_for('glioma')}}">
+                                <h5 class="card-title mb-3">Glioma</h5>
+                            </a>
+                            <p class="card-text mb-0" style="text-align : justify">Glioma adalah jenis tumor otak yang
+                                berasal dari sel-sel glial
+                                di otak atau sumsum tulang belakang. Tumor ini dapat berkembang di berbagai bagian otak
+                                dan memiliki berbagai
+                                tingkat keganasan.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-5">
+                    <div class="card h-100 shadow border-0">
+                        <img class="card-img-top" src="/static/galery_meningioma/meningioma 1.jpg" alt="..." />
+                        <div class="card-body p-4">
+                            <a class="text-decoration-none link-dark stretched-link" href="{{ url_for('meningioma')}}">
+                                <h5 class="card-title mb-3">Meningioma</h5>
+                            </a>
+                            <p class="card-text mb-0" style="text-align : justify">Meningioma adalah jenis tumor yang
+                                umumnya tumbuh dari membran yang
+                                melapisi otak dan sumsum tulang belakang, yang disebut meningi dan sebagian besar
+                                bersifat jinak.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-5">
+                    <div class="card h-100 shadow border-0">
+                        <img class="card-img-top" src="/static/galery_pituitary/pituitary 1.jpg" alt="..." />
+                        <div class="card-body p-4">
+                            <a class="text-decoration-none link-dark stretched-link" href="{{ url_for('pituitary')}}">
+                                <h5 class="card-title mb-3">Pituitary</h5>
+                            </a>
+                            <p class="card-text mb-0" style="text-align : justify">Pituitary merupakan salah satu jenis
+                                tumor yang terjadi pada
+                                kelenjar pituitari yang terletak di dasar otak, di belakang rongga hidung.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-5">
+                    <div class="card h-100 shadow border-0">
+                        <img class="card-img-top" src="/static/galery_notumor/no_tumor 1.jpg" alt="..." />
+                        <div class="card-body p-4">
+                            <a class="text-decoration-none link-dark stretched-link" href="{{ url_for('no_tumor')}}">
+                                <h5 class="card-title mb-3">No Tumor</h5>
+                            </a>
+                            <p class="card-text mb-0" style="text-align : justify">Kelas ini mengacu pada area pada
+                                gambar MRI yang
+                                tidak menunjukkan adanya tumor atau merujuk pada kondisi lain yang tidak termasuk dalam
+                                kategori glioma,
+                                meningioma, atau pituitary. </p>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+        </div>
+    </section>
+</body>
+</div>
+{%endblock%}

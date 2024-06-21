@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block title %}Predict{% endblock %}
+
+{% block content %}
+<div class="jumbotron m-3">
+    <h1 class="display-4">Selamat Datang Pada Halaman Prediksi</h1>
+    <p class="lead">Untuk menganalisis keberadaan tumor otak dari gambar Anda,<br>
+        Silakan upload gambar anda pada button di bawah ini. Pastikan gambar yang Anda miliki format .jpg, .jpeg, atau
+        .png.
+    </p>
+    <hr class="my-4">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <form action="/predict" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label>
+                            <h3>Tambahkan Gambar Anda Di Sini!</h3>
+                        </label>
+                        <input type="file" class="form-control-file" name="file"><br>
+                        <input type="submit" class="btn btn-primary" value="Unggah dan Prediksi">
+                    </div>
+                </form>
+                </p>
+            </div>
+            <div class="col-md-8">
+                {% if img_path %}
+                <h3 style="text-align: center">Hasil Prediksi</h3>
+                <div class="container-fluid" style="text-align: center;">
+                    <div class="row table-responsive">
+                        <div class="col-md-12">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="vertical-align: middle; background-color: azure;"><h5>Gambar</h5></th>
+                                        <th style="vertical-align: middle; background-color: azure;"><h5>Tanggal</h5></th>
+                                        <th style="vertical-align: middle; background-color: azure;"><h5>Waktu</h5></th>
+                                        <th style="vertical-align: middle; background-color: azure;"><h5>Prediksi</h5></th>
+                                        <th style="vertical-align: middle; background-color: azure;"><h5>Tingkat Akurasi</h5></th>
+                                        <th style="vertical-align: middle; background-color: azure;"><h5>Lebih Detail</h5></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><img src="{{ url_for('static', filename='uploads/' + img_path) }}"
+                                                alt="Uploaded Image" class="img-fluid rounded img-responsive"
+                                                style="width: 300px; height: 300px;"></td>
+                                        <td style="vertical-align: middle;">{{ data_date }}</td>
+                                        <td style="vertical-align: middle;">{{ data_time }}</td>
+                                        <td style="vertical-align: middle;">{{ predicted_class }}</td>
+                                        <td style="vertical-align: middle;">{{ confidence }}%</td>
+                                        <td style="vertical-align: middle;"><a
+                                                href="https://web.telegram.org/a/#7126010876" target="_blank"
+                                                class="btn btn-success btn-block">CHAT DENGAN GENOVA AI</a><br><br><p style="font-style: italic;">*Klik button
+                                            diatas untuk tanya jawab yang lebih mendalam tentang {{ predicted_class }}</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div><br><br>
+                </div>
+                {% endif %}
+            </div>
+            <!-- <div class="col-md-8">
+                {% if img_path %}
+                <h2>Prediction Result</h2>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="{{ url_for('static', filename='uploads/' + img_path) }}" alt="Uploaded Image"
+                                class="img-fluid rounded img-responsive" style="width: 300px; height: 300px;">      
+                        </div>
+                        <div class="col-md-8">
+                            <h4>Class : {{ predicted_class }}</h4>
+                            <h4>Confidence : {{ confidence }}%</h4>
+                            <a href="https://web.telegram.org/a/#7126010876" target="_blank" class="btn btn-success">CHAT WITH GENOVA AI</a>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            </div> -->
+        </div>
+    </div>
+
+</div>
+{% endblock %}

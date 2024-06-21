@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}GENOVA AI{% endblock %}
+
+{% block content %}
+<div class="jumbotron m-4">
+    <h1 class="display-4">Penjelasan Tumor Otak</h1>
+    <h2>Apa itu tumor otak?</h2>
+    <hr class="my-4">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <img class="img-fluid rounded img-responsive" src="/static/image/otak_1.png">
+            </div>
+            <div class="col-md-8">
+                <h4 style="text-align: justify;"><b>Definisi Tumor Otak</b>, Tumor otak adalah suatu benjolan atau massa
+                    yang berada di otak, sistem saraf pusat, atau pun sumsum tulang belakang. Otak manusia terdiri 100
+                    juta atau lebih sel neuron (sel otak), dan sel glia (sel pendukung) yang berperan dalam memancarkan
+                    sinyal komunikasi.
+                    Namun, terkadang terdapat anomali ataupun perubahan DNA (materi genetik) pada di dalam siklus sel
+                    neuron dan sel glia, yang disebut dengan mutasi sel (perubahan materi genetik).
+                </h4><br>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img class="img-fluid rounded img-responsive" src="/static/image/otak_2.png">
+                        </div>
+                        <div class="col-md-6">
+                            <img class="img-fluid rounded img-responsive" src="/static/image/otak_3.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h4 style="text-align: justify;">Mutasi sel dapat menyebabkan pertumbuhan sel yang abnormal atau tidak
+                    sesuai. Perubahan abnormal atau mutasi pada DNA sel yang terjadi secara terus menerus dan tidak
+                    terkendali akan membentuk tumor.
+                    Tumor dapat diklasifikasikan menjadi dua: jinak dan ganas. Selain itu, tumor dapat diklasifikasikan
+                    menjadi tumor primer (berasal dari sel yang bermutasi itu sendiri) dan sekunder (berasal dari organ
+                    tubuh lain yang menyebar ke jaringan normal terdekat). Tumor otak memiliki banyak tipe yang dibagi
+                    berdasarkan lokasi terbentuk dan jenis sel yang terlibat. Berikut beberapa contoh tumor otak :
+                    <br><br>
+                    <a style="text-decoration: none;" href="{{ url_for('glioma')}}">1. Glioma <br></a>
+                    <a style="text-decoration: none;" href="{{ url_for('meningioma')}}">2. Maningioma<br></a>
+                    <a style="text-decoration: none;" href="{{ url_for('pituitary')}}">3. Pituitary <br></a> <br>
+
+                    <b>Tumor di otak atau sumsum tulang belakang dapat membesar dan menekan jaringan normal terdekat saat
+                    tumor tumbuh. Dampaknya, bagian yang tertekan oleh tumor akan mengalami gangguan fungsi.</b>
+                </h4>
+            </div>
+        </div>
+    </div>
+</div><br><br><br>
+
+<style>
+    .btn-link {
+        text-decoration: none !important;
+    }
+</style>
+{% endblock %}

@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block title %}GENOVA AI{% endblock %}
+
+{% block content %}
+<div class="jumbotron m-4">
+    <h1 class="display-4">Frequently Asked Questions</h1>
+    <p class="lead">Kumpulan pertanyaan terkait penggunaan web prediksi tumor otak ini.</p>
+    <hr class="my-4">
+    <div class="accordion" id="faqAccordion">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                        aria-expanded="true" aria-controls="collapseOne">
+                        Bagaimana cara mengunggah gambar MRI untuk analisis? <br>
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                <div class="card-body">
+                    1. Pertama, berada pada halaman home. <br>
+                    2. Klik pada tombol Prediksi AI (halaman akan dialihkan pada halaman prediksi). <br>
+                    3. Selanjutnya, silahkan klik "Pilih File". <br>
+                    4. Kemudian pilih gambar yang akan dianalisis. <br>
+                    5. Setelah itu, gambar akan dimuat oleh sistem. <br>
+                    6. Terakhir, klik tombol "Upload and Predict". <br>
+                </div>
+            </div>
+        </div><br>
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                        aria-expanded="false" aria-controls="collapseTwo">
+                        Jenis gambar apa yang dapat pengguna unggah untuk dianalisis? 
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                <div class="card-body">
+                    Pengguna dapat mengunggah gambar dalam format .jpg, .jpeg, atau .png untuk dianalisis.
+                </div>
+            </div>
+        </div><br>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+                        aria-expanded="false" aria-controls="collapseThree">
+                        Berapa lama waktu yang dibutuhkan untuk mendapatkan hasil prediksinya?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
+                <div class="card-body">
+                    Hasil prediksi tersedia dalam maksimal 7 detik setelah gambar diunggah.
+                </div>
+            </div>
+        </div><br>
+        <div class="card">
+            <div class="card-header" id="headingFour">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour"
+                        aria-expanded="false" aria-controls="collapseFour">
+                        Apa yang harus pengguna lakukan jika tidak mendapatkan hasil prediksi?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faqAccordion">
+                <div class="card-body">
+                    Pengguna harus memastikan bahwa gambar yang diunggah telah sesuai 
+                    dengan format yang telah ditentukan.
+                </div>
+            </div>
+        </div><br>
+        <div class="card">
+            <div class="card-header" id="headingFive">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive"
+                        aria-expanded="false" aria-controls="collapseFive">
+                        Apakah pengguna perlu membuat akun untuk menggunakan layanan prediksi AI ini?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#faqAccordion">
+                <div class="card-body">
+                    Dalam penggunaan layanan prediksi AI ini tidak perlu membuat akun 
+                    atau melakukan registrasi terlebih dahulu.
+                </div>
+            </div>
+        </div><br>
+        <div class="card">
+            <div class="card-header" id="headingSix">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix"
+                        aria-expanded="false" aria-controls="collapseSix">
+                        Apakah hasil dari prediksi dapat digunakan sebagai rujukan penyakit?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#faqAccordion">
+                <div class="card-body">
+                    Segala sesuatu yang anda terima dari website ini bersifat prediksi, Anda tentunya harus berkonsultasi dengan dokter spesialis otak
+                </div>
+            </div>
+        </div>
+        <!-- Add more FAQ items as needed -->
+    </div>
+</div>
+
+<style>
+    .btn-link {
+        text-decoration: none !important;
+    }
+</style>
+{% endblock %}
+
