@@ -46,7 +46,7 @@ To run this project locally, follow these steps:
 3. **Extract .zip keras model:**
     ```bash
     cd model
-    unzip CNN_MODEL_KERAS.h5
+    unzip CNN50_Brain_Tumor.zip
     ```
     
 5. **Run the Flask application:**
